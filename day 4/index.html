@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StaffCore Mini - Task Tracker</title>
+    <style>
+        body {
+            background-color: #1a1a1a; 
+            color: #e0e0e0;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            background-color: #2c2c2c;
+            padding: 30px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+            border-top: 4px solid #556b2f; 
+        }
+        h2 {
+            color: #556b2f;
+            text-align: center;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            background-color: #1a1a1a;
+            border: 1px solid #444;
+            color: white;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #556b2f; 
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #405220; 
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        li {
+            background: #333;
+            margin: 10px 0;
+            padding: 15px;
+            border-left: 4px solid #800000; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 0 4px 4px 0;
+        }
+        .del-btn {
+            width: auto;
+            padding: 6px 12px;
+            background-color: #800000;
+        }
+        .del-btn:hover {
+            background-color: #600000;
+        }
+        #total-salary {
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: right;
+            margin-top: 25px;
+            color: #556b2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>StaffCore Mini Tracker</h2>
+        <input type="text" id="task-input" placeholder="Enter Task Name...">
+        <input type="number" id="hours" placeholder="Hours Worked...">
+        <input type="number" id="rate" placeholder="Hourly Rate ($)...">
+        <button id="add-btn">Add Task</button>
+        
+        <ul id="task-list"></ul>
+        <div id="total-salary">Total Pay: $0</div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
